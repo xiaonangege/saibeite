@@ -1,20 +1,28 @@
 <?php
 require_once 'db/mysqlfunction.php';
 require_once 'db/mysqlconfig.php';
-ini_set('date.timezone','Asia/Shanghai');
+require_once 'function.php';//调用函数
+ini_set('date.timezone','Asia/Shanghai');//设置时间时区
 $db = new mysql();
 $link = $db->connect2();
 
-//数据库操作实例插入数据
-//$now = date("Y-m-d H:i:s");
-//echo $now;
-//die();
+if(!$_POST){
+    ajaxCallback(-1,"未获取post传值");
+}
+
+$tem = $_POST['tem'];//获取温度
+$humidity = $_POST['humidity'];//获取湿度
+//$tem = 11.3;
+//$humidity = 45;
 $arr = array(
-    "tem" => 1.25,
-    "humidity" => 132,
+    "tem" => $tem,
+    "humidity" => $humidity,
     "creat_time" => date("Y-m-d H:i:s")
 );
-var_dump($arr);
-$db->insert($arr,t_h);
+
+if ($db->insert($arr,t_h)) {//插入数据操作
+    ajaxCallback(0,"添加成功");
+}
+
 
 ?>
