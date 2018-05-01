@@ -21,7 +21,7 @@ $arr = array(
 );
 
 if ($db->insert($arr,t_h)) {//插入数据操作
-    ajaxCallback(0,"添加成功");
+    ajaxCallback(0,"添加成功","asdf");
 }
 
 
