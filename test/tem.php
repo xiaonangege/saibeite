@@ -7,38 +7,9 @@
  */
 require_once '../function.php';//调用函数
 $data=array(
-    "1"=>array(
-        'tem'=>20,
-        'time'=>10
-    ),
-    "2"=>array(
-        'tem'=>21,
-        'time'=>11
-    ),
-    "3"=>array(
-        'tem'=>26,
-        'time'=>12
-    ),
-    "4"=>array(
-        'tem'=>27,
-        'time'=>13
-    ),
-    "5"=>array(
-        'tem'=>28,
-        'time'=>14
-    ),
-    "6"=>array(
-        'tem'=>29,
-        'time'=>15
-    ),
-    "7"=>array(
-        'tem'=>35,
-        'time'=>16
-    ),
-    "8"=>array(
-        'tem'=>40,
-        'time'=>17
-    ),
+    "tem"=>array(20,21,22,30,31,35,36,20),
+    "time"=>array(10,11,12,13,14,15,16,17),
+
 );
 
 ajaxCallback(0,'温度',$data);
