@@ -53,14 +53,14 @@ class mysql{
      */
     function update($array,$table,$where=null){
         foreach ($array as $key=>$val){
-            $sets.=$key."='".$val."',";
+            $sets=$key."='".$val."',";
         }
         $sets=rtrim($sets,','); //去掉SQL里的最后一个逗号
         $where=$where==null?'':' WHERE '.$where;
         $sql="UPDATE {$table} SET {$sets} {$where}";
         $res=mysqli_query($this->link,$sql);
         if ($res){
-            return mysqli_affected_rows();
+            return $res;
         }else {
             return false;
         }
@@ -95,7 +95,7 @@ class mysql{
     function fetchOne($sql,$result_type=MYSQLI_ASSOC){
         $result=mysqli_query($this->link,$sql);
         if ($result && mysqli_num_rows($result)>0){
-            return mysql_fetch_array($result,$result_type);
+            return mysqli_fetch_array($result,$result_type);
         }else {
             return false;
         }
@@ -112,7 +112,7 @@ class mysql{
      * @return boolean
      */
     function fetchAll($sql,$result_type=MYSQLI_ASSOC){
-//        echo $sql;
+
         $result=mysqli_query($this->link,$sql);
 //        $row=mysqli_fetch_array($result,$result_type);
 //        echo $row;
