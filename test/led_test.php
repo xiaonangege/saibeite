@@ -12,11 +12,11 @@ $data=array(
         'num'=>1
     ),
     "2"=>array(
-        'state'=>1,
+        'state'=>0,
         'num'=>2
     ),
     "3"=>array(
-        'state'=>1,
+        'state'=>0,
         'num'=>3
     ),
     "4"=>array(
