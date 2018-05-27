@@ -13,15 +13,15 @@ $data=array(
     ),
     "2"=>array(
         'state'=>1,
-        'num'=>1
+        'num'=>2
     ),
     "3"=>array(
         'state'=>1,
-        'num'=>1
+        'num'=>3
     ),
     "4"=>array(
         'state'=>1,
-        'num'=>1
+        'num'=>4
     ),
 
 );
