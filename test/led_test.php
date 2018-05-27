@@ -7,8 +7,23 @@
  */
 require_once '../function.php';//调用函数
 $data=array(
-    'state'=>1,
-    'num'=>1
+    "1"=>array(
+        'state'=>1,
+        'num'=>1
+    ),
+    "2"=>array(
+        'state'=>1,
+        'num'=>1
+    ),
+    "3"=>array(
+        'state'=>1,
+        'num'=>1
+    ),
+    "4"=>array(
+        'state'=>1,
+        'num'=>1
+    ),
+
 );
 
 ajaxCallback(0,'开灯',$data);
