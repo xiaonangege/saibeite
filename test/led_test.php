@@ -11,4 +11,4 @@ $data=array(
     'num'=>1
 );
 
-ajaxCallback(0,'开灯',$state);
+ajaxCallback(0,'开灯',$data);
