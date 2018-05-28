@@ -52,13 +52,13 @@ class mysql{
      * @return number|boolean
      */
     function update($array,$table,$where=null){
+        echo "更新";
         foreach ($array as $key=>$val){
             $sets=$key."='".$val."',";
         }
         $sets=rtrim($sets,','); //去掉SQL里的最后一个逗号
         $where=$where==null?'':' WHERE '.$where;
         $sql="UPDATE {$table} SET {$sets} {$where}";
-        echo $sql;
         $res=mysqli_query($this->link,$sql);
         if ($res){
             return $res;
