@@ -15,6 +15,5 @@ $link = $db->connect2();
 $sql='select * from `switchon` order by `id` ASC';
 
 $result=$db->fetchAll($sql);
-var_dump($result);
 ajaxCallback(0,"成功",$result);
 
