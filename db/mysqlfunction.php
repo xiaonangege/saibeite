@@ -52,7 +52,6 @@ class mysql{
      * @return number|boolean
      */
     function update($array,$table,$where=null){
-        echo "更新";
         foreach ($array as $key=>$val){
             $sets=$key."='".$val."',";
         }
