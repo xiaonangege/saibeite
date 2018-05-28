@@ -19,7 +19,8 @@ $arr=array(
 	'state'=>$state
 );
 $con='id='.$id;
+$table='switchon';
 echo $con;
-if ($db->update($arr,switchon,$con)) {//插入数据操作
+if ($db->update($arr,$table,$con)) {//插入数据操作
 	ajaxCallback(0,"添加成功");
 }
