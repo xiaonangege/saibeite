@@ -16,48 +16,5 @@ $sql='select * from `switchon` order by `id` ASC';
 
 $result=$db->fetchAll($sql);
 var_dump($result);
-$data=array(
-	"1"=>array(
-		'state'=>1,
-		'num'=>1
-	),
-	"2"=>array(
-		'state'=>0,
-		'num'=>2
-	),
-	"3"=>array(
-		'state'=>0,
-		'num'=>3
-	),
-	"4"=>array(
-		'state'=>1,
-		'num'=>4
-	),
+ajaxCallback(0,"成功",$result);
 
-);
-var_dump($data);
-die();
-ajaxCallback(0,"添加成功",$result);
-
-
-$data=array(
-    "1"=>array(
-        'state'=>1,
-        'num'=>1
-    ),
-    "2"=>array(
-        'state'=>0,
-        'num'=>2
-    ),
-    "3"=>array(
-        'state'=>0,
-        'num'=>3
-    ),
-    "4"=>array(
-        'state'=>1,
-        'num'=>4
-    ),
-
-);
-
-ajaxCallback(0,'开灯',$data);
