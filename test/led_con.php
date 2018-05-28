@@ -13,6 +13,7 @@ require_once '../function.php';//调用函数
 //}
 $id=$_POST['id'];
 $state=$_POST['state'];
+ajaxCallback(0,"添加成功",$id,$state);
 $arr=array(
 	'state'=>$state
 );
