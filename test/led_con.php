@@ -5,8 +5,8 @@
  * Date: 2018/5/28
  * Time: 17:37
  */
-require_once 'db/mysqlfunction.php';
-require_once 'db/mysqlconfig.php';
+require_once '../db/mysqlfunction.php';
+require_once '../db/mysqlconfig.php';
 require_once 'function.php';//调用函数
 if(!$_POST){
     ajaxCallback(-1,"未获取post传值");
