@@ -12,7 +12,7 @@ ini_set('date.timezone','Asia/Shanghai');//设置时间时区
 $db = new mysql();
 $link = $db->connect2();
 
-$sql='select * from `picture` order by `addtime` ASC';
+$sql='select * from `picture` order by `addtime` DESC';
 
 $result=$db->fetchAll($sql);
 ajaxCallback(0,"成功",$result);
