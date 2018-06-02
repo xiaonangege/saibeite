@@ -59,6 +59,7 @@ class mysql{
         $where=$where==null?'':' WHERE '.$where;
         $sql="UPDATE {$table} SET {$sets} {$where}";
         $res=mysqli_query($this->link,$sql);
+        echo $sql;
         if ($res){
             return $res;
         }else {
