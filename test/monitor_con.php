@@ -11,11 +11,10 @@ require_once '../db/mysqlconfig.php';
 require_once '../function.php';//调用函数
 $db = new mysql();
 $link = $db->connect2();
-//if(!$_POST){
-//	ajaxCallback(-1,"未获取post传值");
-//}
+if(!$_POST){
+	ajaxCallback(-1,"未获取post传值");
+}
 $state=$_POST['state'];
-$state='1';
 
 $arr=array(
 	'state'=>$state
