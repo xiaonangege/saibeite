@@ -15,7 +15,7 @@ $link = $db->connect2();
 //	ajaxCallback(-1,"未获取post传值");
 //}
 $state=$_POST['state'];
-$state='0';
+$state='1';
 
 $arr=array(
 	'state'=>$state
