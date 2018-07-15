@@ -52,12 +52,14 @@ class mysql{
      * @return number|boolean
      */
     function update($array,$table,$where=null){
-        foreach ($array as $key=>$val){
-            $sets=$key."='".$val."',";
+	foreach ($array as $k=>$v){
+            $set[] = "`{$k}`='{$v}'";
         }
-        $sets=rtrim($sets,','); //去掉SQL里的最后一个逗号
+	if (!$set){
+	    return false;
+	}
         $where=$where==null?'':' WHERE '.$where;
-        $sql="UPDATE {$table} SET {$sets} {$where}";
+        $sql="UPDATE {$table} SET ".implode(',', $set)." {$where}";
         $res=mysqli_query($this->link,$sql);
         if ($res){
             return $res;
