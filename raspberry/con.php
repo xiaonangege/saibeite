@@ -21,6 +21,6 @@ $arr=array(
 $con='id='.$id;
 $table='switchon';
 if ($db->update($arr,$table,$con)) {//插入数据操作
-        ajaxCallback(0,"添加成功");
+        ajaxCallback(0,"开锁成功");
 }
 
