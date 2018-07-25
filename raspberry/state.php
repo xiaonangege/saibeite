@@ -9,6 +9,8 @@ if(!$_POST){
 $id = $_POST['id'];
 $db = new mysql();
 $link = $db->connect2();
+$file  = 'tmp/state.php.log';
+file_put_contents($file, date('Y-m-d H:i:s')."\n",FILE_APPEND);
 $con='id='.$id;
 $sql = 'select * from switchon where ' . $con;
 $result = $db->fetchOne($sql);

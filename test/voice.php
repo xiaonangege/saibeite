@@ -17,4 +17,3 @@ $sql='select * from `voice`';
 
 $result=$db->fetchAll($sql);
 ajaxCallback(0,"成功",$result);
-
